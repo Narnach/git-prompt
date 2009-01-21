@@ -474,8 +474,10 @@ prompt_command_function() {
 
     #########################
 	# PS1="$label$rc'$color_who_where$dir_color'${head:10*(${#PWD}<max)}${PWD:(${#PWD}>max)*(${#PWD}-max):max}> '$colors_reset'"
+
+time="\[\033[01;31m\]$(date +%H:%M) "
     
-	PS1="$head_local$colors_reset$label$rc$color_who_where$dir_color\w$tail_local$dir_color> $colors_reset"
+	PS1="$time$head_local$colors_reset$label$rc$color_who_where$dir_color\w$tail_local$dir_color> $colors_reset"
 
     unset head_local tail_local
  }
